@@ -1,0 +1,72 @@
+   <div id="contact" class="request">
+            <div class="container">
+               <div class="row">
+                  {% if messages %}
+                  <div class="col-md-12">
+                     {% for message in messages %}
+                     <div class="titlepage">
+                        <h2>ThankYou <span class="white">Contact With Us !</span></h2>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-6">
+                     <div style="color: wheat; font-size: x-large;">
+                        <h1{% if message.tags %} class="{{ message.tags }} align-content: center" {% endif %}>
+                           {{ message }}
+                           </h1>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <iframe class="col-sm-12"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d442.301358840717!2d77.75003812035854!3d27.51869167209548!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39737ba6c2c4a63b%3A0x56c3e6d8e85a7023!2sbrajminds%20it%20solution!5e0!3m2!1sen!2sin!4v1702025173941!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+               </div>
+               {% endfor %}
+               {% else %}
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Request <span class="white">A call Back</span></h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <form id="request" class="main_form" method="post">
+                     {% csrf_token %}
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="contactus" unicorn:model.defer="FullName" name="FullName" required
+                              placeholder="Full Name" type="type">
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" name="Email" required placeholder="Email"
+                              unicorn:model.defer="Email" type="type" name="Email">
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" name="PhoneNumber" required placeholder="Phone Number"
+                              unicorn:model.defer="PhoneNumber" type="type" name="Phone Number">
+                        </div>
+                        <div class="col-md-12">
+                           <textarea class="textarea" name="Name" required placeholder="Message"
+                              unicorn:model.defer="Name" type="type" Message="Name"></textarea>
+                        </div>
+                        <div class="col-md-12">
+
+                           <button class="send_btn" type="submit">Send</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="col-md-6">
+                  <iframe class="col-sm-12"
+                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d442.301358840717!2d77.75003812035854!3d27.51869167209548!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39737ba6c2c4a63b%3A0x56c3e6d8e85a7023!2sbrajminds%20it%20solution!5e0!3m2!1sen!2sin!4v1702025173941!5m2!1sen!2sin"
+                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+            </div>
+            {% endif %}
+         </div>
+      </div>

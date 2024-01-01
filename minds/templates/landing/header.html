@@ -1,49 +1,115 @@
-{% load static %}
-
-<head>
-   <!-- basic -->
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <!-- mobile metas -->
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-   <!-- site metas -->
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" href="/static/images/logo.png" type="image/x-icon">
-   <title>brajminds</title>
-
-   <meta name="keywords" content="">
-   <meta name="description" content="">
-   <meta name="author" content="">
-   <!-- bootstrap css -->
-   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
-   <!-- style css -->
-   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-   <!-- Responsive-->
-   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-   <!-- fevicon -->
-   <link rel="icon" href="images/fevicon.png" type="image/gif" />
-   <!-- Scrollbar Custom CSS -->
-   <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
-   <!-- Tweaks for older IEs-->
-   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-      media="screen">
-</head>
- 
-
-<div class="overlay"></div>
-<!-- Javascript files-->
-<script src="{% static '/js/jquery.min.js' %}"></script>
-<script src="{% static '/js/popper.min.js' %}"></script>
-<script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static '/js/jquery-3.0.0.min.js' %}"></script>
-<!-- sidebar -->
-<script src="{% static '/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
-<script src="{% static '/js/custom.js'%}"></script>
-<!-- google map js -->
-<script
-   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
-<!-- end google map js -->
-</body>
+ <footer>
+            <div class="footer">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-3 col-md-4 col-sm-6 mr-auto">
+                        <a href="{% url 'landing' %}"><img class="img-flex" src="/static/images/logo.png"
+                              width="200" /></a>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="row">
+                     <div class="col-lg-3 col-md-4 col-sm-6 mr-auto">
+                        <h2 class="text-white">Service</h2>
+                        <ul class="list-inline" style="padding: 0; margin: 0;">
+                           <li class="list-inline-item active"><a href="#" style="color: aliceblue;">Website
+                                 Maintenance</a></li>
+                           <li style="flex-direction: column; align-items: start;"><a href="#"
+                                 style="color: aliceblue;">Web Development</a></li>
+                           <li style="flex-direction: column; align-items: start;"><a href="#"
+                                 style="color: aliceblue;">App development</a></li>
+                        </ul>
+                     </div>
+                     <div class="col-lg-3 col-md-4 col-sm-6 mr-auto">
+                        <h2 class="text-white">About us</h2>
+                        <ol class="list-inline" style="padding: 0; margin: 0; flex-direction: column;">
+                           <li class="list-inline-item active"><a href="#" style="color: aliceblue;">Home</a></li>
+                           <li style="flex-direction: column;"><a href="#about" style="color: aliceblue;">About</a>
+                           </li>
+                           <li style="flex-direction: column;"><a href="#work" style="color: aliceblue;">Work</a>
+                           </li>
+                           <li style="flex-direction: column;"><a href="#contact" style="color: aliceblue;">Contact</a>
+                           </li>
+                        </ol>
+                     </div>
+                     <div class="col-lg-3 col-md-4 col-sm-6 mr-auto">
+                        <h2 class="text-white">Contact us</h2>
+                        <div class="d-flex">
+                           <ol class="list-inline" style="padding: 0; margin: 0;">
+                              <li><span style="font-weight: 600; color: rgb(233, 162, 81); ">Email</span></li>
+                              <li><span style="font-weight: 600; color: rgb(233, 162, 81);">Phone</span></li>
+                           </ol>
+                           <ol class="list-inline" style="padding: 0; margin: 0;">
+                              <li style="color: aliceblue; margin-left: 10px;">brajminds@gmail.com</li>
+                              <li style="color: aliceblue; margin-right: 50px;"><span
+                                    style="color: aqua; margin: 5px;">+91</span>7500032646</li>
+                           </ol>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-4 col-sm-6 mr-auto">
+                        <h2 class="text-white">Address </h2>
+                        <p class="text-white sm-5">{{i.Adress}}</p>
+                     </div>
+                  </div>
+                  <!--  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!+++++++++++++++++++++++++++++++++++++++=============-->
+                  <div class="container">
+                     <div class="row">
+                        <!-- <div class="col">
+                           <div class="row pt-5 align-items-center">
+                              <label class="text-light fs-22">© 2023. Copyright RSI infotech Pvt. Ltd.</label>
+                           </div>
+                        </div> -->
+                        <div class="col">
+                           <div class="social-icons" style="display: flex; justify-content: space-evenly;">
+                              <span>
+                                 <div aria-label="Facebook" style="font-size: 22px; color: white;">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                       viewBox="0 0 320 512" height="1em" width="1em"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                       </path>
+                                    </svg>
+                                 </div>
+                              </span>
+                              <span>
+                                 <div aria-label="Linkedin" style="font-size: 22px; color: white;">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1"
+                                       viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M6 6h2.767v1.418h0.040c0.385-0.691 1.327-1.418 2.732-1.418 2.921 0 3.461 1.818 3.461 4.183v4.817h-2.885v-4.27c0-1.018-0.021-2.329-1.5-2.329-1.502 0-1.732 1.109-1.732 2.255v4.344h-2.883v-9z">
+                                       </path>
+                                       <path d="M1 6h3v9h-3v-9z"></path>
+                                       <path
+                                          d="M4 3.5c0 0.828-0.672 1.5-1.5 1.5s-1.5-0.672-1.5-1.5c0-0.828 0.672-1.5 1.5-1.5s1.5 0.672 1.5 1.5z">
+                                       </path>
+                                    </svg>
+                                 </div>
+                              </span>
+                              <span>
+                                 <div aria-label="Twitter" style="font-size: 22px; color: white;">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                       viewBox="0 0 512 512" height="1em" width="1em"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                       </path>
+                                    </svg>
+                                 </div>
+                              </span>
+                              <span>
+                                 <div aria-label="Instagram" style="font-size: 22px; color: white;">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                       height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.420a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.920.599.28.28.453.546.598.920.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.920.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                                       </path>
+                                    </svg>
+                                 </div>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+         </footer>
